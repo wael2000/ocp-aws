@@ -1,0 +1,264 @@
+    1  subscription-manager repos --list
+    2  subscription-manager register
+    3  subscription-manager repos --enable rhel-7-server-optional-rpms
+    4  subscription-manager repos --list
+    5  subscription-manager list 
+    6  subscription-manager list  --available
+    7  subscription-manager attach --pool=8a85f9815947036501594aca6f277a36
+    8  subscription-manager repos --disable="*"
+    9  subscription-manager repos --enable="rhel-7-server-rpms" --enable="rhel-7-server-extras-rpms" --enable="rhel-7-server-optional-rpms" --enable="rhel-7-server-ose-3.3-rpms"
+   10  rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+   11  yum repolis
+   12  yum repolist
+   13  /usr/bin/rpm -e $(/usr/bin/rpm -qa | grep rhui) 
+   14  yum repolist
+   15  yum -y install atomic-openshift-utils                  python2-boto                  git                  ansible                  python-netaddr                  python2-boto3                  python-click                  python-httplib2
+   16  vi vim /root/.ssh/config
+   17  vi /root/.ssh/config
+   18  mv vim 
+   19  mv vim /root/.ssh/config
+   20  vi /root/.ssh/config
+   21  mv ~ec2-user/ocppoc.pem .
+   22  vi /root/.ssh/config
+   23  export AWS_ACCESS_KEY_ID=AKIAIJYU4G3MOKCYKIBA
+   24  export AWS_SECRET_ACCESS_KEY=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
+   25  yum list ansible
+   26  mkdir -p /usr/share/ansible/openshift-ansible
+   27  git clone https://github.com/openshift/openshift-ansible.git /usr/share/ansible/openshift-ansible
+   28  ls /usr/share/ansible/openshift-ansible
+   29  yum install openshift-ansible-playbooks rpm
+   30  rpm -ql openshift-ansible-playbooks rpm
+   31  rpm -ql openshift-ansible-playbooks rpm | more
+   32  rpm -ql openshift-ansible-playbooks rpm | grep py
+   33  cd /usr/share/ansible/openshift-ansible/playbooks/aws/
+   34  ls
+   35  find /usr/share/ansible ose-on-aws.py
+   36  find /usr/share/ansible -name ose-on-aws.py
+   37  find /root -name ose-on-aws.py
+   38  ls
+   39  cd
+   40  mkdir ocprepo
+   41  cd ocprepo
+   42  git clone https://github.com/openshift/openshift-ansible-contrib.git
+   43  yum -y install tree
+   44  cd ..
+   45  tree ocprepo/
+   46  ssh-keygen 
+   47  vi .ssh/config 
+   48  cd ocprepo/openshift-ansible-contrib/reference-architecture/aws-ansible/
+   49  ls
+   50  ./ose-on-aws.py --stack-name=ekpoc --rhsm-user=weldoami --rhsm-password=R@sha2000 --public-hosted-zone=containerpo.com --keypair=ocppoc -github-client-secret=28d0d07d4d4af9a38a40d39539a8ac9585f9b66f --github
+   51  ./ose-on-aws.py --stack-name=ekpoc --rhsm-user=weldoami --rhsm-password=R@sha2000 --public-hosted-zone=containerpo.com --keypair=ocppoc -github-client-secret=28d0d07d4d4af9a38a40d39539a8ac9585f9b66f --github-organization=ekpoc2017 --github-client-id=5694ef95db9f43e315b3 --rhsm-pool="Red Hat OpenShift Container Platform, Standard, 2-Core" 
+   52  ./ose-on-aws.py --stack-name=ekpoc --rhsm-user=weldoami --rhsm-password=R@sha2000 --public-hosted-zone=containerpo.com --keypair=ocppoc --github-client-secret=28d0d07d4d4af9a38a40d39539a8ac9585f9b66f --github-organization=ekpoc2017 --github-client-id=5694ef95db9f43e315b3 --rhsm-pool="Red Hat OpenShift Container Platform, Standard, 2-Core" 
+   53  ./ose-on-aws.py --stack-name=ekpoc --rhsm-user=weldoami --rhsm-password=R@sha2000 --public-hosted-zone=containerpoc.com --keypair=ocppoc --github-client-secret=28d0d07d4d4af9a38a40d39539a8ac9585f9b66f --github-organization=ekpoc2017 --github-client-id=5694ef95db9f43e315b3 --rhsm-pool="Red Hat OpenShift Container Platform, Standard, 2-Core" 
+   54  ./ose-on-aws.py --stack-name=ekpoc --rhsm-user=weldoami --rhsm-password=R@sha2000 --public-hosted-zone=containerpoc.com --keypair=ocppoc --github-client-secret=28d0d07d4d4af9a38a40d39539a8ac9585f9b66f --github-organization=ekpoc2017 --github-client-id=5694ef95db9f43e315b3 --rhsm-pool="Employee SKU" --ami=ami-b63769a1  
+   55  cat .ssh/config 
+   56  ssh ose-master03.containerpoc.com
+   57  dig ose-master03.containerpoc.com
+   58  yum install dns-utils
+   59  yum install bind-utils
+   60  dig ose-master03.containerpoc.com
+   61  vi .ssh/config 
+   62  cat .ssh/config
+   63  ssh ose-master03.containerpoc.com
+   64  ssh -i ocppoc.pem ose-master03.containerpoc.com,
+   65  ssh -i ocppoc.pem ose-master03.containerpoc.com
+   66  ssh -i ocppoc.pem ec2-user@ose-master03.containerpoc.com
+   67  ssh -i ocppoc.pem ose-master03.containerpoc.com
+   68  vi .ssh/config 
+   69  ssh ose-master03.containerpoc.com
+   70  ssh ose-master01.containerpoc.com
+   71  ping ose-master01.containerpoc.com
+   72  ssh -i ocppoc.pem ec2-user@ec2-34-196-115-45.compute-1.amazonaws.com
+   73  ssh -i ocppoc.pem ec2-user@10.20.1.75
+   74  ssh -i ocppoc.pem ec2-user@ec2-34-196-115-45.compute-1.amazonaws.com
+   75  vi .ssh/config 
+   76  ssh ose-master01.containerpoc.com
+   77  ssh -i ocppoc.pem ose-master01.containerpoc.com
+   78  ssh -i ocppoc.pem ec2-user@ose-master01.containerpoc.com
+   79  ssh -i ocppoc.pem ec2-user@ose-master01.containerpoc.com -vvv
+   80  ssh ose-master01.containerpoc.com -vvv
+   81  file ocppoc.pem 
+   82  less ocppoc.pem
+   83  ls
+   84  ls -l ocppoc.pem 
+   85  ssh -i ocppoc.pem ec2-user@ec2-34-196-115-45.compute-1.amazonaws.com
+   86  scp -i ocppoc.pem ocppoc.pem ec2-user@ec2-34-196-115-45.compute-1.amazonaws.com:/home/ec2-user
+   87  ssh -i ocppoc.pem ec2-user@ec2-34-196-115-45.compute-1.amazonaws.com
+   88  vi .ssh/config 
+   89  ssh ose-master01.containerpoc.com -vvv
+   90  vi .ssh/config 
+   91  ssh -i ocppoc.pem ec2-user@bastion.containerpoc.com
+   92  dig ec2-user@bastion.containerpoc.com
+   93  dig bastion.containerpoc.com
+   94  ssh -i ocppoc.pem ec2-user@34.196.115.45
+   95  ssh -i ocppoc.pem ec2-user@bastion.containerpoc.com
+   96  vi /etc/hosts
+   97  ssh -i ocppoc.pem ec2-user@bastion.containerpoc.com
+   98  mv .ssh/config .
+   99  ssh -i ocppoc.pem ec2-user@bastion.containerpoc.com
+  100  vi config 
+  101  mv config .ssh/
+  102  ssh ose-master01.containerpoc.com 
+  103  ssh ec2-user@ose-master01.containerpoc.com 
+  104  vi .ssh/config 
+  105  ssh ose-master01.containerpoc.com 
+  106  vi .ssh/known_hosts 
+  107  ./ose-on-aws.py --stack-name=ekpoc --rhsm-user=weldoami --rhsm-password=R@sha2000 --public-hosted-zone=containerpoc.com --keypair=ocppoc --github-client-secret=28d0d07d4d4af9a38a40d39539a8ac9585f9b66f --github-organization=ekpoc2017 --github-client-id=5694ef95db9f43e315b3 --rhsm-pool="Employee SKU" --ami=ami-b63769a1  
+  108  cd ocprepo/openshift-ansible-contrib/reference-architecture/aws-ansible/
+  109  ls
+  110  ./ose-on-aws.py --stack-name=ekpoc --rhsm-user=weldoami --rhsm-password=R@sha2000 --public-hosted-zone=containerpoc.com --keypair=ocppoc --github-client-secret=28d0d07d4d4af9a38a40d39539a8ac9585f9b66f --github-organization=ekpoc2017 --github-client-id=5694ef95db9f43e315b3 --rhsm-pool="Employee SKU" --ami=ami-b63769a1  
+  111  export AWS_ACCESS_KEY_ID=AKIAIJYU4G3MOKCYKIBA
+  112  export AWS_SECRET_ACCESS_KEY=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
+  113  ./ose-on-aws.py --stack-name=ekpoc --rhsm-user=weldoami --rhsm-password=R@sha2000 --public-hosted-zone=containerpoc.com --keypair=ocppoc --github-client-secret=28d0d07d4d4af9a38a40d39539a8ac9585f9b66f --github-organization=ekpoc2017 --github-client-id=5694ef95db9f43e315b3 --rhsm-pool="Employee SKU" --ami=ami-b63769a1  
+  114  ls
+  115  grep -Rl 300 *
+  116  vi playbooks/roles/cloudformation-infra/files/greenfield.json
+  117  vi playbooks/roles/cloudformation-infra/files/add-node.json 
+  118  vi playbooks/roles/cloudformation-infra/files/add-infra-node.json 
+  119  vi playbooks/roles/cloudformation-infra/files/brownfield.json 
+  120  grep -Rl 300 *
+  121  ./ose-on-aws.py --stack-name=ekpoc --rhsm-user=weldoami --rhsm-password=R@sha2000 --public-hosted-zone=containerpoc.com --keypair=ocppoc --github-client-secret=28d0d07d4d4af9a38a40d39539a8ac9585f9b66f --github-organization=ekpoc2017 --github-client-id=5694ef95db9f43e315b3 --rhsm-pool="Employee SKU" --ami=ami-b63769a1  
+  122  vi ~/.ssh/known_hosts 
+  123  echo $AWS_ACCESS_KEY
+  124  echo $AWS_ACCESS_KEY_ID
+  125  cat ~/.ssh/known_hosts 
+  126  cat ~/.ssh/config 
+  127  ./ose-on-aws.py --stack-name=ekpoc --rhsm-user=weldoami --rhsm-password=R@sha2000 --public-hosted-zone=containerpoc.com --keypair=ocppoc --github-client-secret=28d0d07d4d4af9a38a40d39539a8ac9585f9b66f --github-organization=ekpoc2017 --github-client-id=5694ef95db9f43e315b3 --rhsm-pool="Employee SKU" --ami=ami-b63769a1  
+  128  ssh ose-master01.containerpoc.com
+  129  vi mterics_url_update.sh
+  130  mv mterics_url_update.sh metrics_url_update.sh
+  131  chmod +x metrics_url_update.sh
+  132  ./metrics_url_update.sh 
+  133  ssh ose-master01.containerpoc.com
+  134  ansible master -m shell -a "grep -i metrics /etc/origin/master/master-config.yaml"
+  135  vi /etc/ansible/hosts
+  136  cd
+  137  ls
+  138  ssh master01.containerpoc.com
+  139  ssh ose-master01.containerpoc.com
+  140  ssh ose-master02.containerpoc.com
+  141  ssh ose-master03.containerpoc.com
+  142  ssh bastion.containerpo.com
+  143  ssh bastion.containerpoc.com
+  144  ssh -i ocppoc.pem ec2-user@34.194.210.121
+  145  vi .ssh/known_hosts 
+  146  ssh ose-master01.containerpoc.com
+  147  ssh ose-master01.containerpoc.com -vv
+  148  ssh -i ocppoc.pem ec2-user@34.196.49.131
+  149  dig bastion.containerpoc.com
+  150  systemctl nscd status
+  151  systemctl status nscd 
+  152  vi .ssh/config 
+  153  mv .ssh/config .
+  154  ssh -i ose-master01.containerpoc.com 
+  155  ssh -i ocppoc.pem ec2-user@bastion.containerpoc.com
+  156  vi /etc/hosts
+  157  ssh -i ocppoc.pem ec2-user@bastion.containerpoc.com
+  158  cat /etc/hosts
+  159  vi /etc/hosts
+  160  mv config .ssh/
+  161  cat .ssh/config 
+  162  ssh ose-master01.containerpoc.com
+  163  ssh ose-master02.containerpoc.com
+  164  w
+  165  ls
+  166  cd ocprepo/openshift-ansible-contrib/reference-architecture/aws-ansible/
+  167  ls
+  168  mv metrics_url_update.sh ~
+  169  cd
+  170  ls
+  171  vi metrics_url_update.sh 
+  172  vi /etc/ansible/hosts
+  173  vi metrics_url_update.sh 
+  174  ssh ose-master01.containerpoc.com
+  175  ssh ose-master02.containerpoc.com
+  176  ssh ose-master03.containerpoc.com
+  177  oc get nodes --show-labels | grep us-east-1b | grep app
+  178  ssh ose-master01.containerpoc.com
+  179  ssh ose-master02.containerpoc.com
+  180  ssh ose-master03.containerpoc.com
+  181  ssh ose-master02.containerpoc.com
+  182  ssh ose-master01.containerpoc.com
+  183  ssh ose-master03.containerpoc.com
+  184  ls
+  185  ssh ose-master01.containerpoc.com
+  186  exit
+  187  ssh ose-master01.containerpoc.com
+  188  ssh ose-master01.containerpoc.com
+  189  ssh ose-master02.containerpoc.com
+  190  ssh ose-master03.containerpoc.com
+  191  ssh ose-master01.containerpoc.com
+  192  ssh ose-master02.containerpoc.com
+  193  ssh ose-master03.containerpoc.com
+  194  ssh ose-master01.containerpoc.com
+  195  exit
+  196  ssh ose-master01.containerpoc.com
+  197  ssh ose-master03.containerpoc.com
+  198  cd ocprepo/openshift-ansible-contrib/reference-architecture/aws-ansible/
+  199  ls
+  200  ./add-node.py --help
+  201  export AWS_ACCESS_KEY_ID=AKIAIJYU4G3MOKCYKIBA
+  202  export AWS_SECRET_ACCESS_KEY=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
+  203  ./add-node.py --help
+  204  ./add-node.py --stack-name=ekpoc --rhsm-user=weldoami --rhsm-password=R@sha2000 --public-hosted-zone=containerpoc.com --keypair=ocppoc --rhsm-pool="Employee SKU" --ami=ami-b63769a1 --node-type=app  --existing-stack=ekpoc
+  205  ./add-node.py --existing-stack=ekpoc --rhsm-user=weldoami --rhsm-password=R@sha2000 --public-hosted-zone=containerpoc.com --keypair=ocppoc --rhsm-pool="Employee SKU" --ami=ami-b63769a1 --node-type=app  --existing-stack=ekpoc
+  206  ./add-node.py --existing-stack=ekpoc --rhsm-user=weldoami --rhsm-password=R@sha2000 --public-hosted-zone=containerpoc.com --keypair=ocppoc --rhsm-pool="Employee SKU" --ami=ami-b63769a1 --node-type=app --iam-role=ekpoc-NodeInstanceProfile-1Q76BLCBT0QB9  --node-sg=sg-0c21d470
+  207  ./add-node.py --existing-stack=ekpoc --rhsm-user=weldoami --rhsm-password=R@sha2000 --public-hosted-zone=containerpoc.com --keypair=ocppoc --rhsm-pool="Employee SKU" --ami=ami-b63769a1 --node-type=app --iam-role=ekpoc-NodeInstanceProfile-1Q76BLCBT0QB9  --node-sg=sg-0c21d470 --shortname=ose-app-node03 --subnet_id=subnet-6c87f341 
+  208  ./add-node.py --existing-stack=ekpoc --rhsm-user=weldoami --rhsm-password=R@sha2000 --public-hosted-zone=containerpoc.com --keypair=ocppoc --rhsm-pool="Employee SKU" --ami=ami-b63769a1 --node-type=app --iam-role=ekpoc-NodeInstanceProfile-1Q76BLCBT0QB9  --node-sg=sg-0c21d470 --shortname=ose-app-node03 --subnet-id=subnet-6c87f341 
+  209  ssh ose-app-node03.containerpoc.com
+  210  cd -
+  211  ./add-node.py --existing-stack=ekpoc --rhsm-user=weldoami --rhsm-password=R@sha2000 --public-hosted-zone=containerpoc.com --keypair=ocppoc --rhsm-pool="Employee SKU" --ami=ami-b63769a1 --node-type=app --iam-role=ekpoc-NodeInstanceProfile-1Q76BLCBT0QB9  --node-sg=sg-0c21d470 --subnet-id=subnet-0f567346 --shortname=ose-app-node04
+  212  ssh ose-master03.containerpoc.com
+  213  ssh ose-node03.containerpoc.com
+  214  ssh ose-app-node03.containerpoc.com
+  215  w
+  216  ssh ose-master02.containerpoc.com
+  217  ssh ose-node02.containerpoc.com
+  218  ssh ose-node01.containerpoc.com
+  219  ping ose-node01.containerpoc.com
+  220  ssh ose-node01.containerpoc.com
+  221  ssh ose-node1.containerpoc.com
+  222  ssh ose-master02.containerpoc.com
+  223  ssh  load average: 36.77, 55.08, 63.35
+  224  ssh ose-app-node01.containerpoc.com
+  225  ssh ose-app-node02.containerpoc.com
+  226  dig ose-node01.containerpoc.com
+  227  dig ose-node1.containerpoc.com
+  228  dig node01.containerpoc.com
+  229  ssh ose-app-node01.containerpoc.com
+  230  ssh ose-app-node02.containerpoc.com
+  231  ssh ose-app-node01.containerpoc.com
+  232  ssh ose-app-node04.containerpoc.com
+  233  ssh ose-master01.containerpoc.com
+  234  ls
+  235  ssh ose-app-node01.containerpoc.com
+  236  exit
+  237  systemctl show 
+  238  -
+  239  systemctl show -p FragmentPath docker.socket
+  240  systemctl show -p FragmentPath
+  241  systemctl show -p
+  242  systemctl show
+  243  ls /usr/lib/systemd/system/docker.serv
+  244  ice 
+  245  systemctl status docker
+  246  ssh ose-master01.containerpoc.com
+  247  exit
+  248  ssh ose-app-node01.containerpoc.com
+  249  ssh ose-app-node01.containerpoc.com
+  250  ssh ose-app-node02.containerpoc.com
+  251  ssh ose-master02.containerpoc.com
+  252  ssh ose-master03.containerpoc.com
+  253  ssh ose-master01.containerpoc.com
+  254  e
+  255  exit
+  256  ssh ose-master01.containerpoc.com
+  257  exit
+  258  ssh ose-master01.containerpoc.com
+  259  exit
+  260  history
+  261  pwd
+  262  ls
+  263  history 
+  264  history > history
